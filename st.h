@@ -53,6 +53,7 @@ enum selection_snap {
 	SNAP_LINE = 2
 };
 
+
 typedef unsigned char uchar;
 typedef unsigned int uint;
 typedef unsigned long ulong;
@@ -88,6 +89,9 @@ void die(const char *, ...);
 void redraw(void);
 void draw(void);
 
+/* Custom Mod */
+void togglecolor(const Arg *arg);
+
 void kscrolldown(const Arg *);
 void kscrollup(const Arg *);
 void printscreen(const Arg *);
@@ -99,6 +103,7 @@ int tattrset(int);
 int tisaltscr(void);
 void tnew(int, int);
 void tresize(int, int);
+void tfulldirt(void);
 void tsetdirtattr(int);
 void ttyhangup(void);
 int ttynew(char *, char *, char *, char **);
